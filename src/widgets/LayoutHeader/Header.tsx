@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import ThemeSwitcher from '../../features/ThemeSwitcher/ui/ThemeSwitcher';
 import Button from '../../shared/ui/Button/Button';
-import Modal from '../../shared/ui/Modal/Modal';
+import { Modal } from '../../shared/ui/Modal/Modal';
 
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -22,8 +22,15 @@ const Header = () => {
       </div>
 
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <h2>О проекте</h2>
-        <p>Это учебное приложение на React + TypeScript + Vite.</p>
+        <Modal.Header>
+          <h2>О проекте</h2>
+        </Modal.Header>
+        <Modal.Body>
+          <p>Это учебное приложение на React + TypeScript + Vite.</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button onClick={() => setIsModalOpen(false)}>Закрыть</Button>
+        </Modal.Footer>
       </Modal>
     </header>
   );
