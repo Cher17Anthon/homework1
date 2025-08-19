@@ -1,13 +1,12 @@
 import MainLayout from "../shared/layouts/MainLayout";
-import PostList from "../widgets/PostList/PostList";
+import AppRouter from "./providers/router/AppRouter";
 
 function App() {
   return (
     <MainLayout>
-      <PostList />
+      <AppRouter />
     </MainLayout>
-  )
+  );
 }
 
-export default App
-
+export default App;
