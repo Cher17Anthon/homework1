@@ -88,3 +88,4 @@ export const {
   useGetUserPostsQuery,
   useGetUserAlbumsQuery,
 } = postsApi;
+
