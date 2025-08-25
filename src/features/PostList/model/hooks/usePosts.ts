@@ -1,4 +1,4 @@
-import { useGetPostsQuery } from "../api/postsApi";
+import { useGetPostsQuery } from "../../../../entities/post/api/postsApi"; 
 import { filterByLength } from "../../../PostLengthFilter/lib/filterByLength";
 import { useState, useMemo } from "react";
 

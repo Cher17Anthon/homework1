@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useGetAlbumsQuery } from "../../features/PostList/model/api/postsApi";
+import { useGetAlbumsQuery } from "../../entities/album/api/albumsApi";
 
 const AlbumsPage = () => {
   const { data: albums, isLoading } = useGetAlbumsQuery();

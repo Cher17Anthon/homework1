@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useGetUsersQuery } from "../../features/PostList/model/api/postsApi";
+import { useGetUsersQuery } from "../../entities/user/api/usersApi";
 
 const UsersPage = () => {
   const { data: users, isLoading } = useGetUsersQuery();

@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import PostsPage from "../../../pages/PostsPage/PostsPage";
 import PostDetailPage from "../../../pages/PostDetailPage/PostDetailPage";
 import AlbumsPage from "../../../pages/AlbumsPage/AlbumsPage";
@@ -9,6 +9,7 @@ import UsersPage from "../../../pages/UsersPage/UsersPage";
 const AppRouter = () => {
   return (
     <Routes>
+      <Route path="/" element={<Navigate to="/posts" replace />} />
       <Route path="/posts" element={<PostsPage />} />
       <Route path="/posts/:id" element={<PostDetailPage />} />
       <Route path="/albums" element={<AlbumsPage />} />
@@ -17,6 +18,7 @@ const AppRouter = () => {
       <Route path="/users/:id/albums" element={<AlbumsPage />} />
       <Route path="/users/:id/posts" element={<PostsPage />} />
       <Route path="/users/:id/todos" element={<TodosPage />} />
+      <Route path="*" element={<Navigate to="/posts" replace />} />
     </Routes>
   );
 };

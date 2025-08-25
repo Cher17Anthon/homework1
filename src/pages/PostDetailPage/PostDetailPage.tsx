@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
-import { useGetPostByIdQuery, useGetCommentsByPostQuery } from "../../features/PostList/model/api/postsApi";
+import { useGetPostByIdQuery } from "../../entities/post/api/postsApi";
+import { useGetCommentsByPostQuery } from "../../entities/comment/api/commentsApi";
 
 const PostDetailPage = () => {
   const { id } = useParams();

@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useGetAlbumPhotosQuery } from "../../features/PostList/model/api/postsApi";
+import { useGetAlbumPhotosQuery } from "../../entities/album/api/albumsApi";
 
 const AlbumDetailPage = () => {
   const { id } = useParams();

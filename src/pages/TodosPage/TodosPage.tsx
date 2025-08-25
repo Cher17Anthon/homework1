@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useGetTodosByUserQuery } from "../../features/PostList/model/api/postsApi";
+import { useGetTodosByUserQuery } from "../../entities/todo/api/todosApi";
 
 const TodosPage = () => {
   const { id } = useParams();
